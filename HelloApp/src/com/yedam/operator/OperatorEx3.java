@@ -5,25 +5,44 @@ import java.util.Scanner;
 public class OperatorEx3 {
 	public static void main(String[] args) {
 		
+		
+		
+		
 		// 변수 balance 선언. 
+		// balance 가 0~100,000, 범위내에서만 추가, 차감되도록.
 		// 입력값을 판단 1) balance 값을 추가. 2) balance 값을 빼기
 		// 3) 현재 balance 값을 콘솔출력. 4) 종료.
 		Scanner scn = new Scanner(System.in);
 		int balance = 0;
 		
 		while(true) {
-			System.out.println("1)추가 2)차감 3)balance 출력 4)종료");
+			System.out.println("1)추가 2)차감 3)출력 4)종료");
 			int menu = scn.nextInt();
 			
 			if(menu == 4) {
 				System.out.println("종료합니다.");
 				break;
 			} else if(menu == 1) {
-				balance += 100;
+				int acct = scn.nextInt();
+				if(balance + acct > 100000) {
+					//System.out.println("더이상 넣을수없습니다.");
+					System.out.printf("현재 balance는 %d 입니다. %d는 추가할 수 없습ㄴ디ㅏ. %n", balance, acct);
+				}else {
+				
+				balance += acct;
+				}
 			} else if (menu == 2) {
-				balance -= 50;
+				int acct = scn.nextInt();
+				if(balance - acct < 0) {
+					//System.out.println("뺄 수 없음");
+					System.out.printf("현재 balance는 %d 입니다. %d는 차감할 수 없습ㄴ디ㅏ. %n", balance, acct);
+				} else {
+				balance -= acct;
+				}
 			} else if (menu ==3) {
 				System.out.println(balance);
+			} else {
+				System.out.println("메뉴에 없는 번호입니다.");
 			}
 		}
 		System.out.println("end of prog.");
