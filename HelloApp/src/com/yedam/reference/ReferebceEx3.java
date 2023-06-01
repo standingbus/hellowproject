@@ -15,17 +15,18 @@ public class ReferebceEx3 {
 		for(double score : scr) {
 			maxVal = score;
 			minVal = score;
-			if(maxVal < score) {
-				maxVal = score;
-			} else if(minVal > score) {
-				minVal = score;
-			}
 			sum += score;
 			cnt++;
-			
 		}
+		for(int i = 0; i<= scr.length-1; i++) {				
+			if(maxVal < scr[i]) {
+				maxVal = scr[i];
+			} else if(minVal > scr[i]) {
+				minVal = scr[i];
 		avg = sum/cnt;
 		System.out.printf("합계는 %.2f, 평균은 %.2f 최고점은 %.1f, 최저점은 %.1f 입니다. ",sum, avg, maxVal, minVal);
 		
+			}
+		}
 	}
 }
