@@ -9,7 +9,7 @@ public class ControlEx4 {
 		//**
 		//***
 		//**** .method3()
-		method2();
+		method3();
 		
 	}
 	public static void method1() {

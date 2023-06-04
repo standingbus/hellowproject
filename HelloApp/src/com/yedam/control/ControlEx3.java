@@ -3,38 +3,38 @@ package com.yedam.control;
 public class ControlEx3 {
 	public static void main(String[] args) {
 		
-		
-		int month = 6;
-		String title = "===" + month + "월 달력===" ;
-		System.out.println(title);
-			
-		String days = "Sun Mon Tue Wed Thr Fri Sat";
-		System.out.println(days);
-		System.out.println("===========================");
-		
-		
-		for (int i = 0; i < getFirstDate(month); i++) {
-			System.out.printf("%3s ", "");
-		}
-		for (int day = 1; day <= getLastDate(month); day++) {
-			System.out.printf("%3d ", day);
-			
-			if((getFirstDate(month) + day)  % 7 == 0) {
-				System.out.println();
-			}
-		}
-		
-		/*
-		System.out.printf("%15s ","");
-		for (int day = 1; day <= 30; day ++) {
-			System.out.printf("%3d ", day);
-			if(day % 7 == 3) {
-				System.out.println();
-			}
-			*/
-		
-		System.out.println();
-		System.out.println("===========================");		
+		method2();
+//		int month = 6;
+//		String title = "===" + month + "월 달력===" ;
+//		System.out.println(title);
+//			
+//		String days = "Sun Mon Tue Wed Thr Fri Sat";
+//		System.out.println(days);
+//		System.out.println("===========================");
+//		
+//		
+//		for (int i = 0; i < getFirstDate(month); i++) {
+//			System.out.printf("%3s ", "");
+//		}
+//		for (int day = 1; day <= getLastDate(month); day++) {
+//			System.out.printf("%3d ", day);
+//			
+//			if((getFirstDate(month) + day)  % 7 == 0) {
+//				System.out.println();
+//			}
+//		}
+//		
+//		/*
+//		System.out.printf("%15s ","");
+//		for (int day = 1; day <= 30; day ++) {
+//			System.out.printf("%3d ", day);
+//			if(day % 7 == 3) {
+//				System.out.println();
+//			}
+//			*/
+//		
+//		System.out.println();
+//		System.out.println("===========================");		
 	}	
 	
 		
